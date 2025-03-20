@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "HR Dashboard";
+}
+
+<h1>HR Dashboard</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Full Name</th>
+            <th>Country</th>
+            <th>Province</th>
+            <th>City</th>
+            <th>Branch</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.Email</td>
+                <td>@staff.FullName</td>
+                <td>@staff.Country</td>
+                <td>@staff.Province</td>
+                <td>@staff.City</td>
+                <td>@staff.Branch?.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
