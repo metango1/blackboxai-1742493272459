@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Inventory Requests";
+}
+
+<h1>Inventory Requests</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Requestor</th>
+            <th>Branch</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var inventoryRequest in Model)
+        {
+            <tr>
+                <td>@inventoryRequest.Requestor.FullName</td>
+                <td>@inventoryRequest.Branch.Name</td>
+                <td>@inventoryRequest.ItemName</td>
+                <td>@inventoryRequest.Quantity</td>
+                <td>@inventoryRequest.Status.ToString()</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@inventoryRequest.Id" class="btn btn-info">Details</a>
+                    @if (inventoryRequest.Status == InventoryRequestStatus.Pending)
+                    {
+                        <a asp-action="Approve" asp-route-id="@inventoryRequest.Id" class="btn btn-success">Approve</a>
+                        <a asp-action="Reject" asp-route-id="@inventoryRequest.Id" class="btn btn-danger">Reject</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
