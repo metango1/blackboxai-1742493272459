@@ -1,0 +1,150 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Custom styles for H82Travels */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+/* Table styles */
+.table {
+  margin-top: 1rem;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn {
+  margin-right: 0.5rem;
+}
+
+/* Card styles */
+.card {
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Alert styles */
+.alert {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Dashboard styles */
+.dashboard-card {
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.status-pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-approved {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-rejected {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Navigation active state */
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+/* Form validation styles */
+.field-validation-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+
+.input-validation-error {
+  border-color: #dc3545;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Loading spinner */
+.spinner {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Modal styles */
+.modal-header {
+  background-color: #f8f9fa;
+}
+
+/* Pagination styles */
+.pagination {
+  margin-top: 1rem;
+}
+
+/* Search box styles */
+.search-box {
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+/* Filter dropdown styles */
+.filter-dropdown {
+  min-width: 200px;
+}
